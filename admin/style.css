@@ -1,0 +1,178 @@
+
+
+body {
+  
+  line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Profile Section */
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 40px; /* Already present, ensures space below profile */
+}
+
+.profile-image {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.profile-info {
+  padding: 30px;
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.profile-title {
+  font-size: 1.2rem;
+  color: #3498db;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.profile-department {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.contact-info {
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.contact-item i,
+.contact-item svg {
+  color: #3498db;
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+/* Education Section */
+.section-title {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+.education-item {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #3498db;
+}
+
+.education-degree {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.education-institution {
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.education-year {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}
+
+.education-section {
+  margin-bottom: 40px; /* Add this class to your education section container in HTML */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .nav ul {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .profile-container {
+    flex-direction: column;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav ul {
+    gap: 15px;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+
+  .contact-btn {
+    padding: 8px 20px !important;
+    font-size: 14px;
+  }
+
+  .footer {
+    padding: 30px 0 0 0;
+  }
+
+  .footer-content {
+    gap: 25px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,194 @@
+
+:root {
+    --primary-color: #4e73df;
+    --secondary-color: #858796;
+    --success-color: #1cc88a;
+    --info-color: #36b9cc;
+    --warning-color: #f6c23e;
+    --danger-color: #e74a3b;
+    --light-color: #f8f9fc;
+    --dark-color: #5a5c69;
+}
+
+body {
+    background-color: #f8f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fc 0%, #e2e8f0 100%);
+}
+
+.login-card {
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.login-body {
+    padding: 30px;
+}
+
+.sidebar {
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--primary-color) 0%, #2a3e9d 100%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 1rem 1.5rem;
+    border-left: 4px solid transparent;
+}
+
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid white;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.topbar {
+    background: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1.5rem;
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+}
+
+.content-section.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+.dashboard-card {
+    border-radius: 8px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    transition: transform 0.3s;
+    border: none;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-border-left-primary {
+    border-left: 4px solid var(--primary-color);
+}
+
+.card-border-left-success {
+    border-left: 4px solid var(--success-color);
+}
+
+.card-border-left-info {
+    border-left: 4px solid var(--info-color);
+}
+
+.card-border-left-warning {
+    border-left: 4px solid var(--warning-color);
+}
+
+.stat-card {
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    opacity: 0.8;
+}
+
+.bg-courses {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #2a3e9d 100%);
+}
+
+.bg-tutors {
+    background: linear-gradient(135deg, var(--success-color) 0%, #0f9d58 100%);
+}
+
+.bg-news {
+    background: linear-gradient(135deg, var(--info-color) 0%, #1c7f9d 100%);
+}
+
+.bg-events {
+    background: linear-gradient(135deg, var(--warning-color) 0%, #d97706 100%);
+}
+
+.table-responsive {
+    border-radius: 8px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+    background: white;
+}
+
+.action-buttons .btn {
+    margin-right: 5px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.qualification-entry {
+    border: 1px solid #e3e6f0;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: #f8f9fc;
+}
+
+.btn-add-qualification {
+    margin-top: 10px;
+}
+
+
+/* Error message styling for login fields */
+#email-error,
+#password-error,
+#agree-error,
+.email-error,
+.password-error,
+.agree-error {
+    display: block;             
+    color: var(--danger-color); 
+    font-size: 0.875rem;        
+    line-height: 1.2;
+    margin-top: 0.25rem;        
+    margin-left: 0;               
+    white-space: normal;          
+}
+
+/* For the checkbox row keep error below the checkbox but aligned */
+.form-check .agree-error {
+    margin-left: 1.5rem; 
+}
+
+/* Optional: add a subtle icon / emphasis for accessibility */
+#email-error::before,
+#password-error::before,
+#agree-error::before {
+    /* content: "⚠️ "; */
+    font-size: 0.85rem;
+    vertical-align: middle;
+}

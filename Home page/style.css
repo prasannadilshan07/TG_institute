@@ -1,0 +1,632 @@
+
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: url("background.jpg") no-repeat center center/cover;
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 4rem;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.overlay p {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.overlay span {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Top Grade Institute Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Strength Section */
+.strength {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f7f8fa;
+}
+
+.strength h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0a1d37;
+}
+
+.strength-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.box {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px);
+}
+
+.box h3 span {
+  color: #f0c330;
+  font-size: 2rem;
+  display: block;
+}
+
+.box p {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #0a1d37;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .strength-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Welcome Section */
+.welcome {
+  background: url("welcome.jpg") no-repeat bottom center / cover;
+  padding: 3rem 2rem 8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.welcome .text h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #2d2d5f;
+}
+.welcome .text h2 span {
+  font-weight: bold;
+  color: #5c69ff;
+}
+.welcome .about {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Reduce about/welcome padding on small screens to avoid overflow */
+@media (max-width: 600px) {
+  .welcome {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  .welcome .about {
+    padding: 1rem;
+    max-width: 95%;
+  }
+}
+
+/* Trending Courses */
+.courses {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #7c2131;
+  margin: 0.5rem auto;
+}
+
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: #eef0ff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: 1px solid #0047ab;
+  background: transparent;
+  color: #0047ab;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0047ab;
+  color: white;
+}
+
+.see-more {
+  text-align: center;
+  margin-top: 35px;
+}
+.see-more-btn {
+  padding: 8px 20px;
+  border: none;
+  background: #0047ab;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.see-more-btn:hover {
+  background: #002d6b;
+}
+
+/* Responsive grid breakpoints for courses */
+@media (max-width: 992px) {
+  .card-container {
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    padding: 0 0.75rem;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .card img {
+    height: 240px;
+  }
+}
+/* News Section */
+.news {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.news-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: justify;
+}
+
+.news-content img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.news-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.news-text h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #1c1c4a;
+}
+
+.news-text p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Facilities Section */
+.facilities {
+  padding: 0 0 10rem 0;
+  background: #f7f9ff;
+  text-align: center;
+}
+
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  align-items: start;
+}
+
+.facility-content img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.facility-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.facility-content:hover {
+  transform: translateY(-10px);
+}
+
+/* Center facility cards on smaller screens */
+@media (max-width: 600px) {
+  .facility-grid {
+    grid-template-columns: 1fr; 
+    justify-items: center; 
+  }
+
+  .facility-content {
+    max-width: 420px; 
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Section Title (shared) */
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #7c2131;
+  margin: 0.5rem auto;
+}
+
+.see-more {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .news-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .news-content img {
+    max-width: 100%;
+  }
+}
+
+/* Tutors */
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #c00;
+  margin: 8px auto 0;
+  border-radius: 3px;
+}
+
+/* Tutors Container */
+.tutors-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
+  padding: 20px;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+/* Responsive tutors: desktop 3, tablet 2, phone 1 */
+@media (max-width: 992px) {
+  .tutors-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .tutors-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+
+
+/* Tutor Card */
+.tutor {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #73a4e7;
+}
+
+.tutor:hover {
+  transform: translateY(-15px);
+  transition: transform 0.6s ease;
+}
+
+.tutor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+.tutor:hover img {
+  transform: scale(1.1);
+}
+
+.tutor-overly {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.tutor:hover .tutor-overly {
+  opacity: 1;
+}
+/* students review */
+
+.testimonial-section {
+  text-align: center;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.testimonial-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #222;
+  margin: 50px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.testimonial-section h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background: #e63946;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+/* Scroll Container */
+.testimonial-scroll {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 10px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+  margin-bottom: auto;
+  /* overflow: hidden; */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+
+/* Additional mobile adjustments */
+@media (max-width: 600px) {
+  /* Hero: reduce height and overlay padding for phones */
+  .hero {
+    height: 60vh;
+  }
+
+  .overlay {
+    padding: 1.25rem;
+    border-radius: 8px;
+  }
+
+  .overlay h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .overlay p {
+    font-size: 1rem;
+  }
+
+  /* Cards: let height be auto and reduce image height */
+  .card {
+    height: auto;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  /* Facilities: reduce large bottom padding */
+  .facilities {
+    padding: 0 0 3rem 0;
+  }
+
+  /* Testimonials & section headings: reduce large margins */
+  .testimonial-section h2 {
+    margin: 1rem 0 0.5rem 0;
+    margin-top: 40px;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Smaller tutor avatars for small screens */
+@media (max-width: 600px) {
+  .tutor {
+    width: 140px;
+    height: 140px;
+  }
+
+  .tutor img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  /* moderate hero reduction for tablets */
+  .hero { height: 70vh; }
+  .overlay { padding: 2rem; }
+}
+
